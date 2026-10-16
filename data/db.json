@@ -1,0 +1,512 @@
+{
+  "users": [
+    {
+      "id": "usr_admin_01",
+      "name": "Elena Rostova",
+      "email": "analyst@sentinelshield.io",
+      "passwordHash": "$2b$10$LNynvWdvxdD4zj4Ao1A5u.bHaRBa3UzWuiZZp68H4mJx/eDilDx82",
+      "role": "admin",
+      "organization": "CyberSec SOC Operations",
+      "createdAt": "2026-09-16T08:09:12.113Z"
+    },
+    {
+      "id": "usr_sec_02",
+      "name": "Marcus Vance",
+      "email": "marcus.vance@sentinelshield.io",
+      "passwordHash": "$2b$10$LNynvWdvxdD4zj4Ao1A5u.bHaRBa3UzWuiZZp68H4mJx/eDilDx82",
+      "role": "analyst",
+      "organization": "Brand Protection Division",
+      "createdAt": "2026-10-01T08:09:12.113Z"
+    }
+  ],
+  "brands": [
+    {
+      "id": "brand_apex_01",
+      "name": "ApexFin Global",
+      "industry": "FinTech & Digital Banking",
+      "officialDomains": [
+        "apexfin.com",
+        "apexfin-global.io"
+      ],
+      "officialHandles": [
+        {
+          "platform": "twitter",
+          "handle": "@ApexFinGlobal",
+          "verified": true
+        },
+        {
+          "platform": "instagram",
+          "handle": "@apexfin_official",
+          "verified": true
+        },
+        {
+          "platform": "linkedin",
+          "handle": "company/apexfin-global",
+          "verified": true
+        },
+        {
+          "platform": "telegram",
+          "handle": "@ApexFinAnnouncements",
+          "verified": true
+        }
+      ],
+      "officialAppIds": [
+        "com.apexfin.mobile",
+        "com.apexfin.wealth"
+      ],
+      "keywords": [
+        "ApexFin",
+        "Apex Wallet",
+        "Apex Pay",
+        "Apex Card",
+        "Apex Support"
+      ],
+      "riskThreshold": 65,
+      "monitoringActive": true,
+      "lastScannedAt": "2026-10-16T07:54:12.113Z"
+    },
+    {
+      "id": "brand_cloud_02",
+      "name": "VortexAI Cloud",
+      "industry": "Enterprise Cloud & AI Infra",
+      "officialDomains": [
+        "vortexai.com",
+        "vortexcloud.io"
+      ],
+      "officialHandles": [
+        {
+          "platform": "twitter",
+          "handle": "@VortexAI",
+          "verified": true
+        },
+        {
+          "platform": "linkedin",
+          "handle": "company/vortex-ai",
+          "verified": true
+        },
+        {
+          "platform": "facebook",
+          "handle": "vortexaicloud",
+          "verified": true
+        }
+      ],
+      "officialAppIds": [
+        "com.vortexai.console"
+      ],
+      "keywords": [
+        "VortexAI",
+        "Vortex Cloud",
+        "VortexAPI",
+        "Vortex CLI"
+      ],
+      "riskThreshold": 70,
+      "monitoringActive": true,
+      "lastScannedAt": "2026-10-16T07:24:12.113Z"
+    },
+    {
+      "id": "brand_lumina_03",
+      "name": "Lumina Health",
+      "industry": "Digital Health & Telemedicine",
+      "officialDomains": [
+        "luminahealth.org",
+        "lumina-care.com"
+      ],
+      "officialHandles": [
+        {
+          "platform": "twitter",
+          "handle": "@LuminaHealth",
+          "verified": true
+        },
+        {
+          "platform": "instagram",
+          "handle": "@lumina.health",
+          "verified": true
+        },
+        {
+          "platform": "facebook",
+          "handle": "luminahealthofficial",
+          "verified": true
+        }
+      ],
+      "officialAppIds": [
+        "org.luminahealth.patientapp"
+      ],
+      "keywords": [
+        "Lumina Health",
+        "Lumina Care",
+        "Lumina Rx"
+      ],
+      "riskThreshold": 60,
+      "monitoringActive": true,
+      "lastScannedAt": "2026-10-16T06:09:12.113Z"
+    }
+  ],
+  "socialThreats": [
+    {
+      "id": "soc_threat_01",
+      "brandId": "brand_apex_01",
+      "brandName": "ApexFin Global",
+      "platform": "twitter",
+      "handle": "@ApexF1n_Support",
+      "displayName": "ApexFin Customer Support Helpdesk",
+      "profileUrl": "https://twitter.com/ApexF1n_Support",
+      "avatarUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=120&auto=format&fit=crop&q=80",
+      "similarityScore": 94,
+      "riskScore": 96,
+      "threatLevel": "CRITICAL",
+      "detectionType": "homoglyph",
+      "suspiciousKeywordsFound": [
+        "Support",
+        "Helpdesk",
+        "DM for recovery",
+        "Urgent KYC validation"
+      ],
+      "bioSnippet": "Official 24/7 ApexFin Support desk. Send direct message for instant frozen transaction release & wallet verification. Link: apexfin-verify[.]net/auth",
+      "followerCount": 342,
+      "followingCount": 4210,
+      "accountAgeDays": 4,
+      "isVerified": false,
+      "status": "CONFIRMED_IMPERSONATION",
+      "detectedAt": "2026-10-15T08:09:12.113Z",
+      "evidence": {
+        "matchedKeywords": [
+          "Support",
+          "Helpdesk",
+          "wallet verification"
+        ],
+        "homoglyphDetails": "Replaced 'i' with '1' in handle; appended '_Support'",
+        "externalLink": "https://apexfin-verify.net/auth",
+        "takedownRecommended": true
+      }
+    },
+    {
+      "id": "soc_threat_02",
+      "brandId": "brand_apex_01",
+      "brandName": "ApexFin Global",
+      "platform": "telegram",
+      "handle": "@ApexFin_RewardAirdrop",
+      "displayName": "ApexFin VIP Token Giveaway",
+      "profileUrl": "https://t.me/ApexFin_RewardAirdrop",
+      "avatarUrl": "https://images.unsplash.com/photo-1622979135225-d2ba269bc1df?w=120&auto=format&fit=crop&q=80",
+      "similarityScore": 88,
+      "riskScore": 92,
+      "threatLevel": "CRITICAL",
+      "detectionType": "combosquat",
+      "suspiciousKeywordsFound": [
+        "Reward",
+        "Airdrop",
+        "Giveaway",
+        "Deposit required"
+      ],
+      "bioSnippet": "ApexFin celebration bonus! First 500 members deposit 0.1 ETH to receive 2500 APEX tokens immediately.",
+      "followerCount": 12480,
+      "followingCount": 12,
+      "accountAgeDays": 9,
+      "isVerified": false,
+      "status": "TAKEDOWN_REQUESTED",
+      "detectedAt": "2026-10-14T08:09:12.113Z",
+      "evidence": {
+        "matchedKeywords": [
+          "Reward",
+          "Airdrop",
+          "deposit"
+        ],
+        "homoglyphDetails": "Combosquatting brand name with financial fraud keywords",
+        "externalLink": "https://claim-apexfin-bonus.xyz",
+        "takedownRecommended": true
+      }
+    },
+    {
+      "id": "soc_threat_03",
+      "brandId": "brand_apex_01",
+      "brandName": "ApexFin Global",
+      "platform": "instagram",
+      "handle": "@apexfin_vip_invest",
+      "displayName": "ApexFin Investments & Loans",
+      "profileUrl": "https://instagram.com/apexfin_vip_invest",
+      "avatarUrl": "https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=120&auto=format&fit=crop&q=80",
+      "similarityScore": 82,
+      "riskScore": 78,
+      "threatLevel": "HIGH",
+      "detectionType": "support_scam",
+      "suspiciousKeywordsFound": [
+        "VIP",
+        "Guaranteed Returns",
+        "WhatsApp direct"
+      ],
+      "bioSnippet": "High-yield investment portal powered by ApexFin. Guaranteed 18% weekly returns. Message WhatsApp +1-829-912-4012.",
+      "followerCount": 2150,
+      "followingCount": 1400,
+      "accountAgeDays": 18,
+      "isVerified": false,
+      "status": "UNDER_INVESTIGATION",
+      "detectedAt": "2026-10-13T08:09:12.113Z",
+      "evidence": {
+        "matchedKeywords": [
+          "Invest",
+          "Guaranteed",
+          "WhatsApp"
+        ],
+        "homoglyphDetails": "Prefix/suffix combosquatting",
+        "externalLink": "https://wa.me/18299124012",
+        "takedownRecommended": true
+      }
+    },
+    {
+      "id": "soc_threat_04",
+      "brandId": "brand_cloud_02",
+      "brandName": "VortexAI Cloud",
+      "platform": "twitter",
+      "handle": "@VortexAl_CEO",
+      "displayName": "Devon Ray (CEO VortexAI)",
+      "profileUrl": "https://twitter.com/VortexAl_CEO",
+      "avatarUrl": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=120&auto=format&fit=crop&q=80",
+      "similarityScore": 91,
+      "riskScore": 89,
+      "threatLevel": "CRITICAL",
+      "detectionType": "executive_impersonation",
+      "suspiciousKeywordsFound": [
+        "CEO",
+        "Exclusive API Credits",
+        "Early Token Access"
+      ],
+      "bioSnippet": "Co-founder & CEO at @VortexAI. Releasing unannounced LLM models and API credit grants to early testers.",
+      "followerCount": 940,
+      "followingCount": 380,
+      "accountAgeDays": 6,
+      "isVerified": false,
+      "status": "UNDER_INVESTIGATION",
+      "detectedAt": "2026-10-15T08:09:12.113Z",
+      "evidence": {
+        "matchedKeywords": [
+          "CEO",
+          "Early Access",
+          "API Credits"
+        ],
+        "homoglyphDetails": "Substituted capital 'I' with lowercase 'l' (VortexAl)",
+        "externalLink": "https://vortex-devpreview.org",
+        "takedownRecommended": true
+      }
+    },
+    {
+      "id": "soc_threat_05",
+      "brandId": "brand_cloud_02",
+      "brandName": "VortexAI Cloud",
+      "platform": "linkedin",
+      "handle": "company/vortex-ai-recruitment-team",
+      "displayName": "VortexAI Global Recruitment Team",
+      "profileUrl": "https://linkedin.com/company/vortex-ai-recruitment-team",
+      "avatarUrl": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=120&auto=format&fit=crop&q=80",
+      "similarityScore": 79,
+      "riskScore": 68,
+      "threatLevel": "MEDIUM",
+      "detectionType": "combosquat",
+      "suspiciousKeywordsFound": [
+        "Remote Job",
+        "Telegram Interview",
+        "Equip fee check"
+      ],
+      "bioSnippet": "Official talent acquisition portal for VortexAI remote roles. Immediate hiring for engineers and prompt evaluators.",
+      "followerCount": 145,
+      "followingCount": 8,
+      "accountAgeDays": 22,
+      "isVerified": false,
+      "status": "NEW",
+      "detectedAt": "2026-10-12T08:09:12.113Z",
+      "evidence": {
+        "matchedKeywords": [
+          "Recruitment",
+          "Remote Job",
+          "Interview"
+        ],
+        "homoglyphDetails": "Combosquatted company page used for recruitment fee scam",
+        "externalLink": "https://t.me/vortex_recruiter_agent",
+        "takedownRecommended": false
+      }
+    },
+    {
+      "id": "soc_threat_06",
+      "brandId": "brand_lumina_03",
+      "brandName": "Lumina Health",
+      "platform": "facebook",
+      "handle": "luminahealth.prescriptions.us",
+      "displayName": "Lumina Health Discount Prescriptions",
+      "profileUrl": "https://facebook.com/luminahealth.prescriptions.us",
+      "avatarUrl": "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=120&auto=format&fit=crop&q=80",
+      "similarityScore": 84,
+      "riskScore": 85,
+      "threatLevel": "HIGH",
+      "detectionType": "brand_hijack",
+      "suspiciousKeywordsFound": [
+        "No Rx Needed",
+        "Cheap Adderall",
+        "Overnight Delivery"
+      ],
+      "bioSnippet": "Official Lumina Health pharmacy outlet. Get prescription medication delivered discretely without prior medical consultation.",
+      "followerCount": 1840,
+      "followingCount": 55,
+      "accountAgeDays": 14,
+      "isVerified": false,
+      "status": "CONFIRMED_IMPERSONATION",
+      "detectedAt": "2026-10-11T08:09:12.113Z",
+      "evidence": {
+        "matchedKeywords": [
+          "Prescriptions",
+          "No Rx Needed",
+          "Delivery"
+        ],
+        "homoglyphDetails": "Subdomain style naming claiming official healthcare status",
+        "externalLink": "https://lumina-rx-online.shop",
+        "takedownRecommended": true
+      }
+    }
+  ],
+  "mobileThreats": [
+    {
+      "id": "mob_threat_01",
+      "brandId": "brand_apex_01",
+      "brandName": "ApexFin Global",
+      "title": "ApexFin Mobile Wallet & Pay",
+      "packageName": "com.apexfin.mobile.quickpay",
+      "store": "apkpure",
+      "developerName": "Apex FinTech Global Devs (Unauthorized)",
+      "iconUrl": "https://images.unsplash.com/photo-1563986768609-322da13575f3?w=120&auto=format&fit=crop&q=80",
+      "riskScore": 98,
+      "threatLevel": "CRITICAL",
+      "detectionVector": "trojan_banking_clone",
+      "abusePermissions": [
+        "android.permission.RECEIVE_SMS (SMS Intercept)",
+        "android.permission.READ_PHONE_STATE",
+        "android.permission.SYSTEM_ALERT_WINDOW (Overlay Attack)",
+        "android.permission.REQUEST_INSTALL_PACKAGES"
+      ],
+      "downloadCountEstimate": "15,000+",
+      "sha256Hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "status": "TAKEDOWN_REQUESTED",
+      "detectedAt": "2026-10-14T08:09:12.113Z",
+      "analysisSummary": "Malicious banking trojan packaging legitimate ApexFin branding. Injects transparent overlay over authentic banking login fields to harvest 2FA OTP codes and credit card PINs."
+    },
+    {
+      "id": "mob_threat_02",
+      "brandId": "brand_apex_01",
+      "brandName": "ApexFin Global",
+      "title": "Apex Crypto Vault & Staking",
+      "packageName": "com.apex.cryptovault.fin",
+      "store": "aptoide",
+      "developerName": "Vault Tech Solutions LLC",
+      "iconUrl": "https://images.unsplash.com/photo-1621416894569-0f39ed31d247?w=120&auto=format&fit=crop&q=80",
+      "riskScore": 88,
+      "threatLevel": "CRITICAL",
+      "detectionVector": "fake_crypto_wallet",
+      "abusePermissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.CAMERA (QR Scanner Exfiltration)"
+      ],
+      "downloadCountEstimate": "3,200+",
+      "sha256Hash": "9f86d081884c7d659a2feaa0c55ad015a3bf4f1b2b0b822cd15d6c15b0f00a08",
+      "status": "INVESTIGATING",
+      "detectedAt": "2026-10-12T08:09:12.113Z",
+      "analysisSummary": "Rogue APK generating hardcoded seed phrases. Any funds transferred into the wallet are swept within 15 seconds to an attacker-controlled multi-sig wallet."
+    },
+    {
+      "id": "mob_threat_03",
+      "brandId": "brand_cloud_02",
+      "brandName": "VortexAI Cloud",
+      "title": "VortexAI Assistant Pro & Prompt Studio",
+      "packageName": "io.vortexai.promptgenerator.free",
+      "store": "google_play",
+      "developerName": "CloudTools Pro Studio",
+      "iconUrl": "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=120&auto=format&fit=crop&q=80",
+      "riskScore": 74,
+      "threatLevel": "HIGH",
+      "detectionVector": "adware_imposter",
+      "abusePermissions": [
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.POST_NOTIFICATIONS"
+      ],
+      "downloadCountEstimate": "50,000+",
+      "sha256Hash": "5e884898da28047151d0e56f8dc6292773603d0d6aabbdd62a11ef721d1542d8",
+      "status": "NEW",
+      "detectedAt": "2026-10-10T08:09:12.113Z",
+      "analysisSummary": "Imposter app displaying copyrighted VortexAI graphics on Google Play. Charges $49.99/mo hidden subscription fee after a 2-day trial, generating hundreds of customer billing complaints."
+    },
+    {
+      "id": "mob_threat_04",
+      "brandId": "brand_lumina_03",
+      "brandName": "Lumina Health",
+      "title": "Lumina Patient Care Portal",
+      "packageName": "net.luminahealth.portal.apk",
+      "store": "telegram_repo",
+      "developerName": "Unknown (Circulating in Telegram Fraud Channels)",
+      "iconUrl": "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?w=120&auto=format&fit=crop&q=80",
+      "riskScore": 95,
+      "threatLevel": "CRITICAL",
+      "detectionVector": "credential_stealer",
+      "abusePermissions": [
+        "android.permission.READ_CONTACTS",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE"
+      ],
+      "downloadCountEstimate": "1,500+",
+      "sha256Hash": "4b227777d4dd1fc61c6f884f48641d02b4d121d3fd328cb08b5531fcacdabf8a",
+      "status": "CONFIRMED_IMPERSONATION",
+      "detectedAt": "2026-10-13T08:09:12.113Z",
+      "analysisSummary": "Spyware payload targeting Lumina Health patients. Exfiltrates medical insurance cards, patient SSNs, and device photos to a command-and-control server in Eastern Europe."
+    }
+  ],
+  "takedowns": [
+    {
+      "id": "tk_apex_01",
+      "threatId": "soc_threat_01",
+      "threatType": "social",
+      "targetEntity": "@ApexF1n_Support",
+      "platform": "Twitter / X",
+      "status": "IN_REVIEW",
+      "submittedBy": "analyst@sentinelshield.io",
+      "submittedAt": "2026-10-15T14:09:12.113Z",
+      "updatedAt": "2026-10-16T04:09:12.113Z",
+      "noticeContent": "FORMAL NOTICE OF TRADEMARK INFRINGEMENT AND PHISHING IMPERSONATION.\nTarget: @ApexF1n_Support (Twitter/X)\nTrademark: ApexFin Global (USPTO Reg #6,419,203)\nEvidence: Phishing credential harvester operating at apexfin-verify[.]net targeting verified bank customers.",
+      "legalGrounds": "TRADEMARK_INFRINGEMENT",
+      "ticketReference": "X-ABUSE-2026-948102"
+    },
+    {
+      "id": "tk_apex_02",
+      "threatId": "mob_threat_01",
+      "threatType": "mobile_app",
+      "targetEntity": "com.apexfin.mobile.quickpay",
+      "platform": "APKPure",
+      "status": "SUBMITTED",
+      "submittedBy": "analyst@sentinelshield.io",
+      "submittedAt": "2026-10-15T08:09:12.113Z",
+      "updatedAt": "2026-10-15T08:09:12.113Z",
+      "noticeContent": "DMCA & MALWARE REMOVAL REQUEST: Rogue banking trojan exploiting ApexFin trademarks and icons with SMS interception capabilities. Immediate purge requested under Safe Harbor provisions.",
+      "legalGrounds": "PHISHING_FRAUD",
+      "ticketReference": "APKP-DMCA-88310"
+    }
+  ],
+  "scanLogs": [
+    {
+      "id": "scan_01",
+      "brandId": "brand_apex_01",
+      "brandName": "ApexFin Global",
+      "startedAt": "2026-10-16T07:39:12.113Z",
+      "completedAt": "2026-10-16T07:41:12.113Z",
+      "sourcesScanned": 1420,
+      "newThreatsFound": 2,
+      "status": "COMPLETED"
+    },
+    {
+      "id": "scan_02",
+      "brandId": "brand_cloud_02",
+      "brandName": "VortexAI Cloud",
+      "startedAt": "2026-10-16T06:39:12.113Z",
+      "completedAt": "2026-10-16T06:41:12.113Z",
+      "sourcesScanned": 980,
+      "newThreatsFound": 1,
+      "status": "COMPLETED"
+    }
+  ]
+}
